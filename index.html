@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Super Sonic Super Clusters</h1>
+        <div id="navBar">
+            <ul id="navList">
+                <li><a class="active" href="">Home</a></li>
+                <li><a href="./overview.html">Overview</a></li>
+                <li><a href="./kmean.html">K-Means</a></li>
+                <li><a href="./mean++.html">K-Means++</a></li>
+                <li><a href="./db.html">DBSCAN</a></li>
+                <li><a href="./comparison.html">Comparison</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="center">
+        <div class="textcenter">
+            <div class="spacer"></div>
+            <h1>Home</h1>
+            <p>
+                This website was created to complete the final project of COSC-225: Algorithms and Visualization.
+                The authors of this website are Grace Tarantola and Michael Pitts. Our final project visualizes
+                different clustering algorithms like k-means, k-means++, and DBSCAN. We provide an overview of
+                clustering in the Overview tab.
+            </p>
+            <p>
+                The individual cluster tabs show how each algorithm works. In addition, the comparison tab lets the
+                user see exactly how the algorithms compare to one another.
+            </p>
+            <p>
+                The link to the final project requirements and description can be found <a
+                    href="https://willrosenbaum.com/teaching/2023s-cosc-225/assignments/final-project/">here</a>.
+            </p>
+            <p>
+                More resources on clustering can be found at <a href = https://www.freecodecamp.org/news/8-clustering-algorithms-in-machine-learning-that-all-data-scientists-should-know/>1</a>,
+                 <a href = https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68>2</a>, and <a href = https://machinelearningmastery.com/clustering-algorithms-with-python/>3</a>.
+            </p>
+            <div class="spacer"></div>
+            <h2>Challenges</h2>
+            <p>
+                We encountered some challenges when creating this project. One example was that there is not a
+                random number generator based on the normal distribution in javascript. So, we had to use the Box-Muller
+                transformation that scales a randomly generated uniform number into the normal realm. There is also no easy way to 
+                pick an element using a weighted distribution so more complex methods had to be applied in the k-means++ scenario. Overall, this was a fun and challenging
+                project where we learned a lot of new clustering techniques. We hope you like it!
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

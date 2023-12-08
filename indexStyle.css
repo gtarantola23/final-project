@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(175, 226, 243);
+}
+
+#header {
+  width: 800px;
+  height: 100px;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+#header h1 {
+  line-height: 100px;
+}
+
+.spacer {
+  width: 800px;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  height: 30px;
+}
+
+.active {
+  background-color: rgb(253, 223, 252);
+}
+
+.center {
+  position: relative;
+  top: 100px;
+  width: 800px;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  height: 100%;
+
+}
+
+.textcenter {
+  background-color: rgb(255, 255, 255);
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  height: 100%;
+  width: 800px;
+}
+
+.textcenter p {
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+.textcenter h1 {
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+.textcenter h2 {
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+#navBar a {
+  /* margin-top: 20px; */
+  border-left-width: 5px;
+  border-color: white;
+  display: inline;
+  color: white;
+  text-decoration: none;
+
+}
+
+#navBar {
+  font-family: Times;
+  font-size: 20px;
+  margin: auto;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(243, 175, 224);
+  height: 50px;
+  overflow: hidden;
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 100px;
+  /* Position the navbar at the top of the page */
+  width: 800px;
+  /* Full width */
+}
+
+#navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(243, 175, 224);
+  top: 0;
+}
+
+#navList li {
+  float: left;
+}
+
+#navList li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}

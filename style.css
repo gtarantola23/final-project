@@ -1,0 +1,195 @@
+body {
+    background-color: rgb(175, 226, 243);
+}
+
+h1 {
+    text-align: center;
+}
+
+#title {
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#svgDiv {
+    position: relative;
+    top: 100px;
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+h2 {
+    margin-left: 30px;
+}
+
+.spacer {
+    height: 20px;
+}
+
+#root p {
+    margin: 4px;
+}
+
+#root {
+    margin: auto;
+    width: 800px;
+    height: 100%;
+}
+
+#self {
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+}
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+#svg-box {
+    fill: rgb(61, 61, 61);
+}
+
+#buttons {
+    text-align: center;
+}
+
+.button {
+    font-size: 15px;
+    margin-left: 20px;
+    width: 70px;
+    height: 30px;
+    border-color: rgb(0, 0, 0);
+    border-width: 3px;
+    border-radius: 2px;
+    background-color: white;
+
+}
+
+.numPoint {
+    font-size: 15px;
+    margin-left: 20px;
+    width: 70px;
+    height: 20px;
+    border-color: rgb(0, 0, 0);
+    border-width: 3px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.buttonlong {
+    font-size: 15px;
+    margin-left: 20px;
+    width: 100px;
+    height: 30px;
+    border-color: rgb(0, 0, 0);
+    border-width: 3px;
+    border-radius: 2px;
+    background-color: white;
+
+}
+
+#prev {
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+    border-color: rgb(0, 0, 0);
+    border-width: 3px;
+    border-radius: 2px;
+    background-color: rgb(245, 41, 150);
+}
+
+
+.button:hover {
+    background-color: rgb(249, 209, 233);
+    color: white;
+}
+
+
+
+
+#header {
+    width: 800px;
+    height: 100px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+}
+
+#header h1 {
+    text-align: center;
+    line-height: 100px;
+}
+
+#navBar a {
+    /* margin-top: 20px; */
+    border-left-width: 5px;
+    border-color: white;
+    display: inline;
+    color: white;
+    text-decoration: none;
+
+}
+
+#navBar {
+    font-family: Times;
+    font-size: 20px;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(243, 175, 224);
+    height: 50px;
+    overflow: hidden;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 100px;
+    /* Position the navbar at the top of the page */
+    width: 800px;
+    /* Full width */
+}
+
+#navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(243, 175, 224);
+    top: 0;
+}
+
+#navList li {
+    float: left;
+}
+
+#navList li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: rgb(253, 223, 252);
+}
+
+.buttonDiv {
+    margin: auto;
+    text-align: center;
+}
+
+.textcenter {
+    margin: 30px;
+
+
+}

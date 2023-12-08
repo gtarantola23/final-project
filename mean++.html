@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>K-Mean ++ Clustering </title>
+  <script src="mean++draw.js" defer> </script>
+  <link rel="stylesheet" href="style.css" type="text/css" >
+
+</head>
+
+<body>
+  <div id="root">
+    <div id="header">
+      <h1>Super Sonic Super Clusters</h1>
+      <div id="navBar">
+          <ul id="navList">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./overview.html">Overview</a></li>
+              <li><a href="./kmean.html">K-Means</a></li>
+              <li><a class="active" href="./mean++.html">K-Means++</a></li>
+              <li><a href="./db.html">DBSCAN</a></li>
+              <li><a href="./comparison.html">Comparison</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="spacer"></div>
+  <div id="svgDiv">
+    <div class="spacer"></div>
+    <h2>K-Means++ Clustering</h2>
+    <div class="spacer"></div>
+    <div class="center">
+      <div class="textcenter">
+          <p>
+              K-Means ++ Clustering is similar to K-Means, with one exception. Choosing the initial 
+              centroid points is done via a weighting process, instead of a randomization one, so that 
+              the initial centroids are more likely to be spread out. Given that data is present, the steps 
+              to the algorithm are completed as follows. Note how steps 2-4 are the same as the k-means algorithm.
+            </p>
+              <ol type="1">
+                <li>Randomly choose/initialize k centroids
+                <ol type = "A">
+                  <li>Randomly choose/initialize 1 centroids</li>
+                  <li>Calculate the distance from each point to its nearest centroid</li>
+                  <li>Use a weighted probability distribution where a point is chosen to be the center of a new centroid with probability proportional to its step B distance squared</li>
+                  <li>Repeat steps B-C until k centroids are chosen</li>
+                </ol>
+              </li>
+                <li>Assign each point in the dataset to its nearest centroid</li>
+                <li>Calculate the new mean of each centroid, using the points that were classified into its group</li>
+                <li>Repeat steps 2-3 until the classified values in each centroid remain unchanged</li>
+              </ol>
+         
+        </div>
+      </div>
+    <svg id="box" width="600" height="600">
+      <rect id="svg-box" width="600" height="600" stroke="black" stroke-width="5" fill="white" />
+    </svg>
+    <div class="spacer"></div>
+    <div class="slidecontainer">
+    <div class="buttonDiv">
+      <label for="clustnum"># of clusters: </label>
+      <select name="clus" id="clustnum" class="button">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+      </select>
+    </div>
+      <div class="spacer"></div>
+  <div class="buttonDiv">
+      <label for="dis">Distribution type:</label>
+      <select name="dis" class="buttonlong" id="dis">
+        <option value="norm">Normal</option>
+        <option value="uni">Uniform</option>
+      </select>
+      <label for="dp">Number of data points:</label>
+      <input class="numPoint" type="number" id="dp" name="dp">
+      <button class="buttonlong" onclick="data()">Add points</button><br>
+  </div>
+  <div class="spacer"></div>
+  <div class="buttonDiv">
+      <button class="button" onclick="stepBut()">Step</button>
+      <button class="button" onclick="animation()">animate</button>
+      <button class="button" onclick="reset()">reset</button>
+      <div class="spacer"></div>
+    </div>
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Super Sonic Super Clusters</title>
+  <script src="db.js" defer> </script>
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+  <div id="root">
+    <div id="header">
+      <h1>Super Sonic Super Clusters</h1>
+      <div id="navBar">
+        <ul id="navList">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./overview.html">Overview</a></li>
+          <li><a href="./kmean.html">K-Means</a></li>
+          <li><a href="./mean++.html">K-Means++</a></li>
+          <li><a class="active" href="./db.html">DBSCAN</a></li>
+          <li><a href="./comparison.html">Comparison</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div id="svgDiv">
+      <div class="spacer"></div>
+      <h2>DBSCAN Clustering</h2>
+      <div class="spacer"></div>
+      <div class="center">
+        <div class="textcenter">
+          <p>
+            The major deficit to the K-means and K-means ++ Clustering algorithms is that loosely related observations
+            may be clustered together. Every data point will be clustered eventually, even if the points are far apart.
+          </p>
+          <p>
+            The DBSCAN algorithm provides a density-based alternative based on the idea that a cluster is a region of
+            high
+            point density. The user specifies <em>Min Neighbors</em> and <em>Radius</em> that refer to the mimimum
+            number of neighboring points
+            that must be present within a radius for a set of points to be clustered together. The steps of the
+            algorithm are completed as follows.
+          </p>
+          <ol type="1">
+            <li>Randomly pick a point in the data</li>
+            <li>Assign this point to a cluster if there are at least <em>Min Neighbors</em> within a <em>Radius</em> to
+              the point</li>
+            <li>Repeat steps 1-2 recursively by repeating the neighborhood calculation for each neighboring point</li>
+          </ol>
+
+        </div>
+      </div>
+      <svg id="box" width="600" height="600">
+        <rect id="svg-box" width="600" height="600" stroke="black" stroke-width="5" />
+      </svg>
+      <div class="spacer"></div>
+      <div id="status"></div>
+      <div id="slidecontainer">
+        <div class="buttonDiv">
+          <label for="clustnum"># of clusters: </label>
+          <select name="clus" id="clustnum" class="button">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+          </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="buttonDiv">
+          <label for="dis">Distribution type:</label>
+          <select name="dis" class="buttonlong" id="dis">
+            <option value="norm">Normal</option>
+            <option value="uni">Uniform</option>
+          </select>
+          <label for="dp">Number of data points:</label>
+          <input class="numPoint" type="number" id="dp" name="dp">
+          <button class="buttonlong" onclick="data()">Add points</button><br>
+        </div>
+        <div class="spacer"></div>
+        <div class="buttonDiv">
+          <label for="neigh">Min Neighbors:</label>
+          <input type="number" id="neigh" name="neigh" class="buttonlong">
+          <label for="r">Radius:</label>
+          <input type="number" id="r" name="r" class="buttonlong">
+        </div>
+        <div class="spacer"></div>
+
+        <div class="buttonDiv">
+          <button class="button" onclick="stepBut()">Step</button>
+          <button class="button" onclick="animation()">animate</button>
+          <button class="button" onclick="reset()">reset</button>
+          <div class="spacer"></div>
+        </div>
+
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+</html>

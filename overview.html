@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Overview</title>
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Super Sonic Super Clusters</h1>
+        <div id="navBar">
+            <ul id="navList">
+                <li><a href="./index.html">Home</a></li>
+                <li><a class="active" href="./overview.html">Overview</a></li>
+                <li><a href="./kmean.html">K-Means</a></li>
+                <li><a href="./mean++.html">K-Means++</a></li>
+                <li><a href="./db.html">DBSCAN</a></li>
+                <li><a href="./comparison.html">Comparison</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="center">
+        <div class="textcenter">
+            <div class="spacer"></div>
+            <h1>Background</h1>
+            <p>
+                In the realm of data analysis, simplification of a problem is crucial in order to extract meaningful
+                patterns that can help answer
+                pertinent questions. At times, it may be necessary to evaluate the entirety of the data set and
+                differentiate unique groups based on
+                their distinguishing characteristics. Conversely, in other instances, there may be a need to focus on
+                specific groups in order to
+                isolate the factors that render them distinctive. Clustering, as a sophisticated analytical technique,
+                is instrumental in uncovering
+                intricate patterns within complex data. It facilitates the identification of a comprehensive structure
+                that offers insights into
+                individuals within a dataset and carries significant policy implications. The primary objective of
+                clustering is to cluster data units
+                in a manner that underscores their "natural association" within the same cluster, while simultaneously
+                exhibiting "distinctiveness"
+                from other clusters (Anderberg, 1973).
+            </p>
+            <p>
+                Categorization, a fundamental and ubiquitous activity among human beings, involves the sorting of
+                elements into distinct groups.
+                The abundance of events we experience on a daily basis makes it impractical to process the unique
+                properties of each individual
+                stimulus without the use of categorical frameworks. In the absence of such schemes, every moment of the
+                day would demand an equal
+                amount of attention and cognitive resources, making it unfeasible to manage.
+            </p>
+            <p>
+                Classification is the process of assigning an item into a known category. Once a category is
+                established, the essential
+                attributes of the group are known and other items can be classified into that group. However, there may
+                be some uncertainty with assigning
+                any given observation. The complexity of the classification problem can arise due to imperfect
+                definitions of classes, overlapping categories,
+                and random fluctuations in observations. One way to deal with this is to find the probability the new
+                item's membership with each category and
+                classify according to some criterion (Anderberg, 1973). The most simple criterion is to classify based
+                on the most probable category, but more sophisticated rules
+                may be needed if the categories are not equally likely. Cluster analysis refers to discovering a
+                category structure that fits the observations.
+                Nothing is known about the category structure. The objective is to classify new observations such that
+                "natural groups" form.
+            </p>
+            <p>
+                It is important to recognize that the process of categorization means that all qualities of the group,
+                positive and negative, can
+                potentially be assigned to each individual in the group. This can lead to certain feelings being
+                associated with each group that may
+                or may not be true for every individual. For example, a football player elicits a different emotional
+                response than a priest. One must be
+                careful of the potential of stereotypes. Every individual in each group is not exactly the same. There
+                is a genetic explanation that
+                we all possess unique qualities for the sake of diversity and survival of our species. Without our
+                indiviudal characteristics, we
+                might not be different from a society of robots.
+            </p>
+            <p>
+                The analyst of the clustering problem is usually informed about the desirable properties of category
+                structures.
+            </p>
+            <p>
+                The reason clustering is so difficult is because of the large number of ways that n observations can be
+                sorted into m groups. Abramowitz & Stegun (2014)
+                show the mathematical formulation of this quantity, which reaches 2,436,684,974,110,751 if we have 25
+                observations and 5 groups. This problem gets
+                compounded due to the fact that the number of groups is unknown. It would take a long period of time to
+                examine all of the possible groups and we would lose
+                the ability to make meaningful distinctions between scenarios. Thus, clustering algorithms were created
+                to try to solve this problem. <strong>In our final project,
+                    we examine three such algorithms, known as k-means, k-means ++, and DBSCAN.</strong> Each of the
+                clustering tabs desribes the algorithm used, and shows a visual
+                representation of how each algorithm is performed. The comparison tab shows how each algorithm compares
+                to one another at each step.
+            </p>
+            <p>
+                The visual representation of clustering becomes limited as one goes beyond two dimensions. While,
+                some packages allow for a visual of a 3 dimensional clustering result, we cannot visualize the fourth
+                dimension
+                well. So, there are visual limitations as the clustering is done on multiple categories.
+            </p>
+            <h2>
+                References
+            </h2>
+            <p>
+                Anderberg, M. R. (1973). <em>Cluster Analysis for Applications</em>. Academic Press. <a
+                    href="https://doi.org/10.1016/C2013-0-06161-0">https://doi.org/10.1016/C2013-0-06161-0</a>
+            </p>
+            <p>
+                Jain, A. K., and Dubes, R. C. (1988). <em>Algorithms for Clustering Data</em>. Prentice Hall.
+            </p>
+            <p>
+                Abramowitz, M., and Stegun, I. A. (2014). <em>Handbook of Mathematical Functions with formulas, graphs,
+                    and mathematical tables</em>. Martino Publishing.
+            </p>
+            <div class="spacer"></div>
+
+        </div>
+        
+    </div>
+</body>
+
+</html>

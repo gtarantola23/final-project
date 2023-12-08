@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Super Sonic Super Clusters</title>
+  <script src="meanDraw.js" defer> </script>
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+  <div id="root">
+    <div id="header">
+      <h1>Super Sonic Super Clusters</h1>
+      <div id="navBar">
+        <ul id="navList">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./overview.html">Overview</a></li>
+          <li><a class="active" href="./kmean.html">K-Means</a></li>
+          <li><a href="./mean++.html">K-Means++</a></li>
+          <li><a href="./db.html">DBSCAN</a></li>
+          <li><a href="./comparison.html">Comparison</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div id="svgDiv">
+      <div class="spacer"></div>
+      <h2>K-Means Clustering</h2>
+      <div class="spacer"></div>
+      <div class="center">
+        <div class="textcenter">
+          <p>
+            K-Means Clutering is one of the most common clustering algorithms. Before the start, the user must specify
+            <em>k</em> that refers to the number of clusters.
+            Given that data is present, the steps to the algorithm are completed as follows.
+          </p>
+          <ol type="1">
+            <li>Randomly choose/initialize k centroids</li>
+            <li>Assign each point in the dataset to its nearest centroid</li>
+            <li>Calculate the new mean of each centroid, using the points that were classified into its group</li>
+            <li>Repeat steps 2-3 until the classified values in each centroid remain unchanged</li>
+          </ol>
+
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="center">
+        <div class="textcenter">
+          <p>
+            To use the interactive visualization tool in this website, you must first add data points.
+            You can choose the number of data points to add and the distribution of the added data. In addition,
+            you can manually add data points if you wish. Once you have added all the data that you would like, you can
+            either step through or animate the algorithm after specifying the number of clusters. Once you are finished,
+            you can reset and start again.
+          </p>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <svg id="box" width="600" height="600">
+        <rect id="svg-box" width="600" height="600" stroke="black" stroke-width="5" />
+      </svg>
+      <div class="spacer"></div>
+      <div id="slidecontainer">
+        <div class="buttonDiv">
+          <label for="clustnum"># of clusters: </label>
+          <select name="clus" id="clustnum" class="button">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+          </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="buttonDiv">
+          <label for="dis">Distribution type:</label>
+          <select name="dis" class="buttonlong" id="dis">
+            <option value="norm">Normal</option>
+            <option value="uni">Uniform</option>
+          </select>
+          <label for="dp">Number of data points:</label>
+          <input class="numPoint" type="number" id="dp" name="dp">
+          <button class="buttonlong" onclick="data()">Add points</button><br>
+        </div>
+        <div class="spacer"></div>
+        <div class="buttonDiv">
+          <button class="button" onclick="stepBut()">Step</button>
+          <button class="button" onclick="animation()">animate</button>
+          <button class="button" onclick="reset()">reset</button>
+          <div class="spacer"></div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

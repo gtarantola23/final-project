@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Super Sonic Super Clusters</title>
+  <script src="compDraw.js" defer> </script>
+  <link rel="stylesheet" href="compStyle.css" type="text/css">
+
+</head>
+
+<body>
+  <div id="root">
+    <div id="header">
+      <h1>Super Sonic Super Clusters</h1>
+      <div id="navBar">
+        <ul id="navList">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./overview.html">Overview</a></li>
+          <li><a href="./kmean.html">K-Means</a></li>
+          <li><a href="./mean++.html">K-Means++</a></li>
+          <li><a href="./db.html">DBSCAN</a></li>
+          <li><a class="active" href="./comparison.html">Comparison</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div id="svgDiv">
+      <div class="spacer"></div>
+      <h2>A Comparison of 3 Clustering Algorithms</h2>
+      <div class="center">
+        <div class="textcenter">
+          <p>
+            For this page, we aimed to create a useful visualization to clearly show the differences in clustering algorithms. For K-means and K-means ++,
+            the first initial centroid is the same, and then the rest are choosen by their respective initialization methods. All algorithms use the same set of data points,
+            that is the add data button will add the same points to all three svg boxes, and when you click to add a point in one
+            of the boxes, the point will appear in the same spot in the other two.
+          </p>
+          
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <h3>K-Means Clustering</h3>
+      <svg id="km-box" width="600" height="300">
+        <rect class="svg-box" width="600" height="300" stroke="black" stroke-width="5" />
+      </svg>
+      <h3>K-Means++ Clustering</h3>
+      <svg id="kmp-box" width="600" height="300">
+        <rect class="svg-box" width="600" height="300" stroke="black" stroke-width="5" />
+      </svg>
+      <h3>DBSCAN</h3>
+      <svg id="db-box" width="600" height="300">
+        <rect class="svg-box" width="600" height="300" stroke="black" stroke-width="5" />
+      </svg>
+
+      <div class="spacer"></div>
+      <div id="status"></div>
+      <div id="slidecontainer">
+        <div class="buttonDiv">
+          <label for="clustnum"># of clusters: </label>
+          <select name="clus" id="clustnum" class="button">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+          </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="buttonDiv">
+          <label for="dis">Distribution type:</label>
+          <select name="dis" class="buttonlong" id="dis">
+            <option value="norm">Normal</option>
+            <option value="uni">Uniform</option>
+          </select>
+          <label for="dp">Number of data points:</label>
+          <input class="numPoint" type="number" id="dp" name="dp">
+          <button class="buttonlong" onclick="data()">Add points</button><br>
+        </div>
+        <div class="spacer"></div>
+        <div class="buttonDiv">
+          <label for="neigh">Min Neighbors:</label>
+          <input type="number" id="neigh" name="neigh" class="buttonlong">
+          <label for="r">Radius:</label>
+          <input type="number" id="r" name="r" class="buttonlong">
+        </div>
+        <div class="spacer"></div>
+
+        <div class="buttonDiv">
+          <button class="button" onclick="stepBut()">Step</button>
+          <button class="button" onclick="animation()">animate</button>
+          <button class="button" onclick="reset()">reset</button>
+          <div class="spacer"></div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
